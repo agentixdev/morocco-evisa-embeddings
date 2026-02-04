@@ -16,13 +16,13 @@ async function addMoroccoEvisa() {
     await client.connect();
     console.log('✅ Connected to database\n');
     
-    // Check if Morocco data already exists for VISA category
+    // Check if Morocco data already exists for VISA_POLICY category
     const existingVisa = await client.query(`
       SELECT * FROM "CountryRequirementEmbedding" 
-      WHERE "isoCode" = 'MA' AND category = 'VISA'
+      WHERE "isoCode" = 'MA' AND category = 'VISA_POLICY'
     `);
     
-    console.log(`Found ${existingVisa.rows.length} existing VISA entries for Morocco\n');
+    console.log(`Found ${existingVisa.rows.length} existing VISA_POLICY entries for Morocco\n`);
     
     // Create entries optimized for different purposes
     const evisaEntries = [
@@ -43,7 +43,7 @@ async function addMoroccoEvisa() {
       // Prepare the e-visa data optimized for your search fields
       const evisaData = {
         isoCode: 'MA',
-        category: 'VISA',
+        category: 'VISA_POLICY',
         timelinePhase: 'BEFORE_TRAVEL',
         title: entry.title,
         description: `Official electronic visa application portal for Morocco ${entry.purpose} purposes. Apply for ${entry.purpose} e-visas to Morocco online through the official government portal. This digital platform processes single and multiple entry electronic visas for travelers visiting Morocco for ${entry.purpose}.`,
@@ -143,11 +143,11 @@ async function addMoroccoEvisa() {
     const verification = await client.query(`
       SELECT id, title, url, category, "timelinePhase", "structuredData"
       FROM "CountryRequirementEmbedding" 
-      WHERE "isoCode" = 'MA' AND category = 'VISA'
+      WHERE "isoCode" = 'MA' AND category = 'VISA_POLICY'
       ORDER BY id DESC
     `);
     
-    console.log('✅ All Morocco VISA entries after update:');
+    console.log('✅ All Morocco VISA_POLICY entries after update:');
     verification.rows.forEach((row, i) => {
       const structuredData = JSON.parse(row.structuredData || '{}');
       console.log(`  ${i + 1}. [${row.id}] ${row.title}`);
