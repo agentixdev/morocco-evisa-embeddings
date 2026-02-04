@@ -26,7 +26,12 @@ This script adds the official Morocco e-visa URL to your Neon pgvector embedding
 - **Category**: VISA
 - **Phase**: BEFORE_TRAVEL  
 - **Type**: Official government e-visa portal
-- **Features**: Tourist & business visas, single & multiple entry
+- **Entries**: 2 optimized entries (Tourism + Business)
+- **Search optimization**: Matches your 4 search fields:
+  - TRAVELLING TO: Morocco
+  - CITIZENSHIP: All nationalities 
+  - TRAVELLING FROM: Any country
+  - PURPOSE OF TRAVEL: Tourism OR Business
 
 ## Data Structure:
 
@@ -46,4 +51,16 @@ After running, the script will show you all Morocco VISA entries to confirm the 
 
 ## SEO Impact:
 
-When users search for "Morocco visa" or "Morocco e-visa" on your site, this official URL will now appear in results, improving user experience and SEO ranking for Morocco-related travel queries.
+When users search on your site with these combinations, the Morocco e-visa will appear:
+
+**Search Examples:**
+- TRAVELLING TO: "Morocco" + PURPOSE: "Tourism" → Tourism e-visa entry
+- TRAVELLING TO: "Morocco" + PURPOSE: "Business" → Business e-visa entry  
+- Any citizenship + Morocco destination → Both entries ranked by purpose
+
+**Keywords optimized for:**
+- Morocco visa, Morocco e-visa, Morocco electronic visa
+- Morocco tourism/business visa, Morocco travel requirements
+- Morocco visa application, Morocco online visa
+
+This improves user experience and SEO ranking for Morocco-related travel queries with your specific search field structure.
