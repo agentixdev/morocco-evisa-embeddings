@@ -5,6 +5,10 @@
   "main": "add-morocco-evisa.js",
   "scripts": {
     "add-morocco": "node add-morocco-evisa.js",
+    "add-morocco-simple": "node add-morocco-simple.js",
+    "add-india": "node add-india-evisa.js",
+    "verify-morocco": "node verify-morocco.js",
+    "verify-india": "node verify-india.js",
     "audit-db": "node db-audit.js"
   },
   "dependencies": {
